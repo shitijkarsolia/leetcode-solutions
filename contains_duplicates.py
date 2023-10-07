@@ -4,13 +4,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        count_mapping = []
+        count_mapping = set()
         for ele in nums:
             if ele in count_mapping:
                 return True
             else:
-                count_mapping.append(ele)
+                count_mapping.add(ele)
         return False
 
 obj = Solution()
-print(obj.containsDuplicate([1,5,-2,-4,0]))
+print(obj.containsDuplicate([1,5,-2,-4,1]))
